@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTISTPEDIA</title>
+    <link rel="stylesheet" href="am.css">
+    <script src="https://kit.fontawesome.com/7279b87e97.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div id="app">
+    <div  class="menulines" @click="openNav()">
+        <span id="menulines">&#9776</span>
+        <span id="desc">Artistpedia</span>
+    </div>
+    <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
+        <ul >
+            
+            <li>Artists<i class="fa-solid fa-caret-down " id="down" @click="toggleBar()"></i>
+                <div id="artistname">
+                <ul id ="aNames">
+                    <li>Arctic Monkeys</li>
+                    <li>Lana Del Ray</li>
+                    <li>The Strokes</li>
+                    <li>The Smiths</li>
+                    <li>Harry Styles</li>
+                    <li>Taylor Swift</li>
+                </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+   
+    <div class="main-div" id="main-div">
+        <div class="artist-container" >
+            <div class="img-container">
+                <img src="https://i0.wp.com/knobstudio.com.mx/wp-content/uploads/2018/04/artic-monkeys.jpg" alt="am" id="cover">
+            </div>
+            <div class="heading">
+             <h2 id="title">ARCTIC MONKEYS</h2>
+            </div>
+            <div class="link">
+                <a href="https://www.ticketek.com">
+                    <button>Get Tickets</button>
+                </a>
+            </div>
+            <div class="sub">
+                <h4 id="artist">Arctic Monkeys are an English rock band formed in Sheffield in 2002. The band includes Alex Turner (lead vocals, guitar, keyboards), Jamie Cook (guitar, keyboards), Nick O'Malley (bass guitar, backing vocals), and Matt Helders (drums). Andy Nicholson (bass guitar, backing vocals) quit the band in 2006 following their debut album.
+                </h4>
+            </div>
+
+            <div>
+                <h4>Listen to one of their top songs here</h4>
+            </div>
+
+            <audio src="music/am.mp3" id="audio"></audio>
+
+            <div class="music-controls">
+                
+                <i class="fa-solid fa-backward" id="prev" title="prev" ></i>
+                <i class="fa-solid fa-play" id="play" title="play/pause" @click="toggleMusic()"></i>
+                <i class="fa-solid fa-forward" id="next" title="next"></i>
+                
+            </div>
+            <div class="progress-container" id="progress-container">
+                <div class="progress-div" id="progress-div">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="progress-duration">
+                    <div id="current-time">0:00</div>
+                    <div id="duration"></div>    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="am.js"></script>
+</div>
+</body>
+</html>
