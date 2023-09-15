@@ -20,7 +20,7 @@ a{
     height: 100vh;
     display: grid;
     place-items: center;
-    background-image: url("images/background.jpg");
+    background-image: url("background.jpg");
     background: cover;
 
 }
